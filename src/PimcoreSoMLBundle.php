@@ -1,6 +1,6 @@
 <?php
 
-namespace Muz\Pimcore\SoMLBundle;
+namespace KJanczyk\PimcoreSoMLBundle;
 
 use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
 

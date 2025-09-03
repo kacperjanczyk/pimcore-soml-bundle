@@ -4,11 +4,6 @@ services:
         autoconfigure: true
         public: false
         bind:
-#            $twitterApiKey: '%env(EVENTS_API_KEY)%'
-#            $twitterApiSecret: '%env(EVENTS_API_KEY)%'
-#            $twitterBearerToken: '%env(EVENTS_API_KEY)%'
-#            $twitterAccessToken: '%env(EVENTS_API_KEY)%'
-#            $twitterAccessTokenSecret: '%env(EVENTS_API_KEY)%'
             $facebookPageId: '%env(FACEBOOK_PAGE_ID)%'
             $facebookAppId: '%env(FACEBOOK_APP_ID)%'
             $facebookAppSecret: '%env(FACEBOOK_APP_SECRET)%'
@@ -26,17 +21,11 @@ services:
             - '../src/DependencyInjection/'
             - '../src/DTO/'
 
-#    Muz\Pimcore\SoMLBundle\Provider\TwitterProvider:
-#        tags: ['soml.provider']
-#
     Muz\Pimcore\SoMLBundle\Provider\InstagramProvider:
         tags: ['soml.provider']
         
     Muz\Pimcore\SoMLBundle\Provider\FacebookProvider:
         tags: ['soml.provider']
-
-#    Muz\Pimcore\SoMLBundle\Provider\LinkedinProvider:
-#        tags: ['soml.provider']
 
     # Register scheduler task
     Muz\Pimcore\SoMLBundle\Scheduler\SocialMediaImportTaskProvider:
