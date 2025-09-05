@@ -20,4 +20,14 @@ class PimcoreSoMLBundle extends AbstractPimcoreBundle
     {
         return 'Manages social media posts from multiple platforms';
     }
+
+    public function getJsPaths(): array
+    {
+        return ['/bundles/pimcoresoml/js/extension.js'];
+    }
+
+    public function getAdminJsPaths(): array
+    {
+        return ['/bundles/pimcoresoml/js/extension.js'];
+    }
 }
