@@ -3,45 +3,20 @@
   "description": "Pimcore Social Media Library Bundle: import and manage social media feed",
   "type": "pimcore-bundle",
   "license": "MIT",
-  "keywords": ["pimcore", "bundle", "social media", "import", "feed"],
-  "authors": [
-    {
-      "name": "Kacper Janczyk",
-      "email": "kacper@janczyk.dev"
-    }
-  ],
   "require": {
     "php": ">=8.2",
-    "pimcore/pimcore": "^11.0",
-    "guzzlehttp/guzzle": "^7.8",
-    "nesbot/carbon": "^2.73",
-    "symfony/filesystem": "^6.4 || ^7.0"
+    "pimcore/pimcore": "^11.5"
   },
   "autoload": {
-      "psr-4": {
-        "KJanczyk\\PimcoreSOMLBundle\\": "src/"
-      }
-  },
-  "autoload-dev": {
     "psr-4": {
-        "KJanczyk\\PimcoreSOMLBundle\\Tests\\": "tests/"
+      "KKanczyk\\PimcoreSOMLBundle\\": "src/"
     }
   },
   "extra": {
     "pimcore": {
       "bundles": [
-        {
-          "id": "KJanczyk\\PimcoreSOMLBundle\\PimcoreSOMLBundle"
-        }
+        "KJanczyk\\\\PimcoreSOMLBundle\\\\PimcoreSOMLBundle"
       ]
     }
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "composer/package-versions-deprecated": true
-    }
-  },
-  "minimum-stability": "stable",
-  "prefer-stable": true
+  }
 }
