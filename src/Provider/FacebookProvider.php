@@ -46,6 +46,6 @@ class FacebookProvider extends AbstractProvider
      */
     public function downloadMedia()
     {
-        // TODO: Implement downloadMeida() method.
+        // TODO: Implement downloadMedia() method.
     }
 }
