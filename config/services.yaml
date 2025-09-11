@@ -4,6 +4,22 @@ services:
         autoconfigure: true
         public: false
 
+    KJanczyk\PimcoreSOMLBundle\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
     KJanczyk\PimcoreSOMLBundle\Command\:
         resource: '../src/Command/*'
         tags: [ 'console.command' ]
+        
+    KJanczyk\PimcoreSOMLBundle\Provider\FacebookProvider:
+        tags: ['soml.provider']
+        arguments:
+            $facebookAccessToken: '%env(FACEBOOK_ACCESS_TOKEN)%'
+            $facebookAppId: '%env(FACEBOOK_APP_ID)%'
+            $facebookAppSecret: '%env(FACEBOOK_APP_SECRET)%'
+            $facebookPageId: '%env(FACEBOOK_PAGE_ID)%'
+
+    KJanczyk\PimcoreSOMLBundle\Service\ImportService:
+        arguments:
+            $providers: !tagged_iterator soml.provider
