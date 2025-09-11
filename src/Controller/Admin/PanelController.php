@@ -15,9 +15,6 @@ class PanelController extends AbstractController
         return new Response(
             '<div style="padding:20px;font:14px/1.4 system-ui,sans-serif">
                 <h1 style="margin-top:0;">SOML Bundle Panel</h1>
-                <p>To jest testowa zawartość z kontrolera (PanelController::panel).</p>
-                <p>Ścieżka: <code>/admin/soml/panel</code></p>
-                <p>Gdy zobaczysz to w przeglądarce po zalogowaniu do Pimcore, Krok 3 jest OK.</p>
             </div>'
         );
     }
